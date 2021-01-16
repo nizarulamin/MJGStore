@@ -189,7 +189,7 @@ public class MainMenuPage extends javax.swing.JFrame {
     }//GEN-LAST:event_ItemDetailsActionPerformed
 
     private void CustomerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CustomerMouseClicked
-        CustomerPage cus = new CustomerPage();
+        CustomerPageDetails cus = new CustomerPageDetails();
         cus.setVisible(true);
         cus.pack();
         cus.setLocationRelativeTo(null);
@@ -216,7 +216,7 @@ public class MainMenuPage extends javax.swing.JFrame {
     }//GEN-LAST:event_UserActionPerformed
 
     private void CustomerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustomerActionPerformed
-        CustomerPage cus = new CustomerPage();
+        CustomerPageDetails cus = new CustomerPageDetails();
         cus.setVisible(true);
         cus.pack();
         cus.setLocationRelativeTo(null);
