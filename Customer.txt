@@ -1,3 +1,2 @@
-Naim Najmi;001110140157;0174291767;No 22 Jalan Serai Permai;
-Khairul Nizam;0012532536;0125623900;No 33 Jalan Seri Kerai;
-Hariz Nufail;02342135635;0193245325;No 44 Jalan Seri Kembangan;
+Naim Najmi;001110140157;0174291767;No 22 Jalan Serai;
+Hairul;99001122334455;0125318032;No 33, Jalan Seri Kembangan;
