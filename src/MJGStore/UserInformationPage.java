@@ -450,7 +450,7 @@ public class UserInformationPage extends javax.swing.JFrame {
                       
                     User user = new User(line);
                     
-                    System.out.println("Staff ID: " + user.getStaffID());
+                    //System.out.println("Staff ID: " + user.getStaffID());
                       
                     if (!user.getStaffID().equals(staffID)) {
                       pw.println(line);

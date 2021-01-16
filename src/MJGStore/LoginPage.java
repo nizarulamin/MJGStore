@@ -297,6 +297,8 @@ public class LoginPage extends javax.swing.JFrame {
                 menu.pack();
                 menu.setLocationRelativeTo(null);
                 menu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                String username = txtUsername.getText();
+                menu.username(username);
                 this.dispose();
             }
             else

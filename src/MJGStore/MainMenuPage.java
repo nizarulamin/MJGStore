@@ -47,13 +47,16 @@ public class MainMenuPage extends javax.swing.JFrame {
     
     void showDate(){
        Date d = new Date();
-       SimpleDateFormat s = new SimpleDateFormat("yyyy-MM-dd");
+       SimpleDateFormat s = new SimpleDateFormat("dd-MM-YYYY");
        DateLabel.setText(s.format(d));
         
     }
+    void username(String username){
+        labelUser.setText("Welcome " + username + "!");
+    }
     
     public void scaleImage1() {
-        ImageIcon icon = new ImageIcon("C:\\Users\\Forge-15\\Documents\\NetBeansProjects\\MJGStore\\src\\Images\\Icon User.png");
+        ImageIcon icon = new ImageIcon("D:\\User\\Documents\\UiTM Tapah\\CS230\\PART 3\\CSC435 - JAVA\\BlueJ\\PROJECT - GUI\\MJGStore\\src\\Images\\Icon User.png");
         Image img = icon.getImage();
         Image imgScale = img.getScaledInstance(user.getWidth(), user.getHeight(), Image.SCALE_SMOOTH);
         ImageIcon scaledIcon = new ImageIcon(imgScale);
@@ -61,7 +64,7 @@ public class MainMenuPage extends javax.swing.JFrame {
     }
     
     public void scaleImage2() {
-        ImageIcon icon = new ImageIcon("C:\\Users\\Forge-15\\Documents\\NetBeansProjects\\MJGStore\\src\\Images\\Icon Item.png");
+        ImageIcon icon = new ImageIcon("D:\\User\\Documents\\UiTM Tapah\\CS230\\PART 3\\CSC435 - JAVA\\BlueJ\\PROJECT - GUI\\MJGStore\\src\\Images\\Icon Item.png");
         Image img = icon.getImage();
         Image imgScale = img.getScaledInstance(item.getWidth(), item.getHeight(), Image.SCALE_SMOOTH);
         ImageIcon scaledIcon = new ImageIcon(imgScale);
@@ -69,7 +72,7 @@ public class MainMenuPage extends javax.swing.JFrame {
     }
     
     public void scaleImage3() {
-        ImageIcon icon = new ImageIcon("C:\\Users\\Forge-15\\Documents\\NetBeansProjects\\MJGStore\\src\\Images\\Icon Customer.png");
+        ImageIcon icon = new ImageIcon("D:\\User\\Documents\\UiTM Tapah\\CS230\\PART 3\\CSC435 - JAVA\\BlueJ\\PROJECT - GUI\\MJGStore\\src\\Images\\Icon Customer.png");
         Image img = icon.getImage();
         Image imgScale = img.getScaledInstance(customer.getWidth(), customer.getHeight(), Image.SCALE_SMOOTH);
         ImageIcon scaledIcon = new ImageIcon(imgScale);
@@ -77,7 +80,7 @@ public class MainMenuPage extends javax.swing.JFrame {
     }
     
     public void scaleImage4() {
-        ImageIcon icon = new ImageIcon("C:\\Users\\Forge-15\\Documents\\NetBeansProjects\\MJGStore\\src\\Images\\Icon Cashier.png");
+        ImageIcon icon = new ImageIcon("D:\\User\\Documents\\UiTM Tapah\\CS230\\PART 3\\CSC435 - JAVA\\BlueJ\\PROJECT - GUI\\MJGStore\\src\\Images\\Icon Cashier.png");
         Image img = icon.getImage();
         Image imgScale = img.getScaledInstance(cashier.getWidth(), cashier.getHeight(), Image.SCALE_SMOOTH);
         ImageIcon scaledIcon = new ImageIcon(imgScale);
@@ -97,6 +100,7 @@ public class MainMenuPage extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         DateLabel = new javax.swing.JLabel();
         TimeLabel = new javax.swing.JLabel();
+        labelUser = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         ItemDetails = new javax.swing.JButton();
         User = new javax.swing.JButton();
@@ -115,6 +119,12 @@ public class MainMenuPage extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel1.setText("MENU");
 
+        DateLabel.setFont(new java.awt.Font("Open Sans", 0, 14)); // NOI18N
+
+        TimeLabel.setFont(new java.awt.Font("Open Sans", 0, 14)); // NOI18N
+
+        labelUser.setFont(new java.awt.Font("GTPressuraMono-LightItalic", 0, 15)); // NOI18N
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -123,6 +133,8 @@ public class MainMenuPage extends javax.swing.JFrame {
                 .addGap(28, 28, 28)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(labelUser, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(TimeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(DateLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -130,18 +142,17 @@ public class MainMenuPage extends javax.swing.JFrame {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(24, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addComponent(jLabel1))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(DateLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(TimeLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(22, 22, 22)))
-                .addGap(34, 34, 34))
+                        .addComponent(jLabel1)
+                        .addGap(23, 23, 23))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(labelUser, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
+                        .addComponent(TimeLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(DateLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
         );
 
         jPanel2.setBackground(new java.awt.Color(236, 240, 241));
@@ -384,6 +395,7 @@ public class MainMenuPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel labelUser;
     private javax.swing.JLabel user;
     // End of variables declaration//GEN-END:variables
 }
