@@ -26,12 +26,12 @@ import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
 
-public class ItemDetails extends javax.swing.JFrame {
+public class ItemDetailsPage extends javax.swing.JFrame {
 
     /**
      * Creates new form ItemDetails
      */
-    public ItemDetails() {
+    public ItemDetailsPage() {
         initComponents();
         this.setLocationRelativeTo(null); //center form in the screen
         DefaultTableModel model = (DefaultTableModel) table.getModel();
@@ -325,7 +325,7 @@ public class ItemDetails extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void ReturnButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ReturnButtonMouseClicked
-        MainMenu menu = new MainMenu();
+        MainMenuPage menu = new MainMenuPage();
         menu.setVisible(true);
         menu.pack();
         menu.setLocationRelativeTo(null);
@@ -511,7 +511,7 @@ public class ItemDetails extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnSearchMouseClicked
 
     private void ReturnButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReturnButtonActionPerformed
-        MainMenu menu = new MainMenu();
+        MainMenuPage menu = new MainMenuPage();
         menu.setVisible(true);
         menu.pack();
         menu.setLocationRelativeTo(null);
@@ -547,19 +547,20 @@ public class ItemDetails extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ItemDetails.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ItemDetailsPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ItemDetails.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ItemDetailsPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ItemDetails.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ItemDetailsPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ItemDetails.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ItemDetailsPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
-            new ItemDetails().setVisible(true);
+            new ItemDetailsPage().setVisible(true);
         });
     }
 

@@ -471,7 +471,7 @@ public class CustomerPage extends javax.swing.JFrame {
     }//GEN-LAST:event_UpdateButtonActionPerformed
 
     private void ReturnButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ReturnButtonMouseClicked
-        MainMenu menu = new MainMenu();
+        MainMenuPage menu = new MainMenuPage();
         menu.setVisible(true);
         menu.pack();
         menu.setLocationRelativeTo(null);
@@ -547,7 +547,7 @@ public class CustomerPage extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSearchActionPerformed
 
     private void ReturnButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReturnButtonActionPerformed
-        MainMenu menu = new MainMenu();
+        MainMenuPage menu = new MainMenuPage();
         menu.setVisible(true);
         menu.pack();
         menu.setLocationRelativeTo(null);

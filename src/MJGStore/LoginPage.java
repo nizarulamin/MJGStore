@@ -13,12 +13,12 @@ import java.util.*;
  *
  * @author acer
  */
-public class Login extends javax.swing.JFrame {
+public class LoginPage extends javax.swing.JFrame {
 
     /**
      * Creates new form Login
      */
-    public Login() {
+    public LoginPage() {
         initComponents();
         this.setLocationRelativeTo(null);
     }
@@ -292,7 +292,7 @@ public class Login extends javax.swing.JFrame {
             if(haveuser)
             {
                 JOptionPane.showMessageDialog(null,"Access Granted!");
-                MainMenu menu = new MainMenu();
+                MainMenuPage menu = new MainMenuPage();
                 menu.setVisible(true);
                 menu.pack();
                 menu.setLocationRelativeTo(null);
@@ -307,7 +307,7 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLoginbtnLoginActionPerformed
 
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
-        StartUp_Page startpage = new StartUp_Page();
+        StartUpPage startpage = new StartUpPage();
         startpage.setVisible(true);
         startpage.pack();
         startpage.setLocationRelativeTo(null);
@@ -332,15 +332,16 @@ public class Login extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
         
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
-            new Login().setVisible(true);
+            new LoginPage().setVisible(true);
         });
     }
 

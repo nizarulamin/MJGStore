@@ -10,12 +10,12 @@ import javax.swing.*;
  *
  * @author acer
  */
-public class StartUp_Page extends javax.swing.JFrame {
+public class StartUpPage extends javax.swing.JFrame {
 
     /**
      * Creates new form StartUp_Page
      */
-    public StartUp_Page() {
+    public StartUpPage() {
         initComponents();
         this.setLocationRelativeTo(null);
     }
@@ -118,7 +118,7 @@ public class StartUp_Page extends javax.swing.JFrame {
     private void LogButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogButtonActionPerformed
         // TODO add your handling code here:
         JOptionPane.showMessageDialog(null,"welcome to Login Page");
-        Login log = new Login();
+        LoginPage log = new LoginPage();
         log.setVisible(true);
         log.pack();
         log.setLocationRelativeTo(null);
@@ -167,19 +167,20 @@ public class StartUp_Page extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(StartUp_Page.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(StartUpPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(StartUp_Page.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(StartUpPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(StartUp_Page.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(StartUpPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(StartUp_Page.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(StartUpPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
-            new StartUp_Page().setVisible(true);
+            new StartUpPage().setVisible(true);
         });
     }
 

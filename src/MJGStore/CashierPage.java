@@ -19,12 +19,12 @@ import javax.swing.table.TableRowSorter;
  *
  * @author nizar
  */
-public class Cashier extends javax.swing.JFrame {
+public class CashierPage extends javax.swing.JFrame {
 
     /**
      * Creates new form Cashier
      */
-    public Cashier() {
+    public CashierPage() {
         initComponents();
         this.setLocationRelativeTo(null);
         
@@ -246,7 +246,7 @@ public class Cashier extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void ReturnButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReturnButtonActionPerformed
-        MainMenu menu = new MainMenu();
+        MainMenuPage menu = new MainMenuPage();
         menu.setVisible(true);
         menu.pack();
         menu.setLocationRelativeTo(null);
@@ -271,20 +271,23 @@ public class Cashier extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Cashier.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CashierPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Cashier.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CashierPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Cashier.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CashierPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Cashier.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CashierPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Cashier().setVisible(true);
+                new CashierPage().setVisible(true);
             }
         });
     }

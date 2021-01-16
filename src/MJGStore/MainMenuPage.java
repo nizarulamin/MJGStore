@@ -10,12 +10,12 @@ package MJGStore;
  * @author acer
  */
 import javax.swing.JFrame;
-public class MainMenu extends javax.swing.JFrame {
+public class MainMenuPage extends javax.swing.JFrame {
 
     /**
      * Creates new form MainMenu
      */
-    public MainMenu() {
+    public MainMenuPage() {
         initComponents();
         this.setLocationRelativeTo(null); //center form in the screen
     }
@@ -176,7 +176,7 @@ public class MainMenu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void ItemDetailsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ItemDetailsMouseClicked
-        ItemDetails itd = new ItemDetails();
+        ItemDetailsPage itd = new ItemDetailsPage();
         itd.setVisible(true);
         itd.pack();
         itd.setLocationRelativeTo(null);
@@ -198,7 +198,7 @@ public class MainMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_CustomerMouseClicked
 
     private void ExitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitButtonActionPerformed
-        Login log = new Login();
+        LoginPage log = new LoginPage();
         log.setVisible(true);
         log.pack();
         log.setLocationRelativeTo(null);
@@ -207,7 +207,7 @@ public class MainMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_ExitButtonActionPerformed
 
     private void UserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UserActionPerformed
-        UserInformation userinfo = new UserInformation();
+        UserInformationPage userinfo = new UserInformationPage();
         userinfo.setVisible(true);
         userinfo.pack();
         userinfo.setLocationRelativeTo(null);
@@ -225,7 +225,7 @@ public class MainMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_CustomerActionPerformed
 
     private void CashierActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CashierActionPerformed
-        Cashier cash = new Cashier();
+        CashierPage cash = new CashierPage();
         cash.setVisible(true);
         cash.pack();
         cash.setLocationRelativeTo(null);
@@ -250,20 +250,21 @@ public class MainMenu extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MainMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainMenuPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MainMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainMenuPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MainMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainMenuPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MainMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainMenuPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MainMenu().setVisible(true);
+                new MainMenuPage().setVisible(true);
             }
         });
     }

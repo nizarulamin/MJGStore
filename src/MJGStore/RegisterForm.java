@@ -225,7 +225,7 @@ public class RegisterForm extends javax.swing.JFrame {
                     {
                         JOptionPane.showMessageDialog(null, "The new registration complete");
                         out.print(inName+";"+inStaffID+";"+inPhoneNum+";"+inUser+";"+inPass+";\n");
-                        StartUp_Page startpage = new StartUp_Page();
+                        StartUpPage startpage = new StartUpPage();
                         startpage.setVisible(true);
                         startpage.pack();
                         startpage.setLocationRelativeTo(null);
