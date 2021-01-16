@@ -90,7 +90,7 @@ public class ItemDetailsPage extends javax.swing.JFrame {
         AvailableTF = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         SearchTF = new javax.swing.JTextField();
-        BtnSearch = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -198,18 +198,14 @@ public class ItemDetailsPage extends javax.swing.JFrame {
 
         jLabel7.setText("*Search Item Code,Item Name,Brand");
 
-        BtnSearch.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        BtnSearch.setText("Search");
-        BtnSearch.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BtnSearchMouseClicked(evt);
+        SearchTF.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                SearchTFKeyReleased(evt);
             }
         });
-        BtnSearch.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnSearchActionPerformed(evt);
-            }
-        });
+
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel8.setText("Search");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -221,12 +217,16 @@ public class ItemDetailsPage extends javax.swing.JFrame {
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(ReturnButton)
                         .addContainerGap(1074, Short.MAX_VALUE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 694, Short.MAX_VALUE)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 694, Short.MAX_VALUE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
                                 .addComponent(jLabel7)
-                                .addGap(0, 0, Short.MAX_VALUE)))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
+                                .addComponent(jLabel8)
+                                .addGap(18, 18, 18)
+                                .addComponent(SearchTF)))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(AddButton, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -249,20 +249,14 @@ public class ItemDetailsPage extends javax.swing.JFrame {
                             .addComponent(TotalStockTF)
                             .addComponent(AvailableTF))
                         .addGap(51, 51, 51))))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(SearchTF, javax.swing.GroupLayout.PREFERRED_SIZE, 506, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(BtnSearch)
-                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
+                .addGap(23, 23, 23)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BtnSearch)
-                    .addComponent(SearchTF, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(SearchTF, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel3Layout.createSequentialGroup()
@@ -505,11 +499,6 @@ public class ItemDetailsPage extends javax.swing.JFrame {
         AvailableTF.setText(model.getValueAt(selectedRow, 5).toString());
     }//GEN-LAST:event_tableMouseClicked
 
-    private void BtnSearchMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnSearchMouseClicked
-        // TODO add your handling code here:
-
-    }//GEN-LAST:event_BtnSearchMouseClicked
-
     private void ReturnButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReturnButtonActionPerformed
         MainMenuPage menu = new MainMenuPage();
         menu.setVisible(true);
@@ -519,16 +508,14 @@ public class ItemDetailsPage extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_ReturnButtonActionPerformed
 
-    private void BtnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSearchActionPerformed
-        
-        DefaultTableModel model = (DefaultTableModel)table.getModel();
-        TableRowSorter<DefaultTableModel> tr;
-        tr = new TableRowSorter<>(model);
-        table.setRowSorter(tr);
+    private void SearchTFKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_SearchTFKeyReleased
+        // TODO add your handling code here:
+        DefaultTableModel model = (DefaultTableModel) table.getModel();
         String search = SearchTF.getText();
-        
+        TableRowSorter<DefaultTableModel> tr = new TableRowSorter<DefaultTableModel>(model);
+        table.setRowSorter(tr);
         tr.setRowFilter(RowFilter.regexFilter(search));
-    }//GEN-LAST:event_BtnSearchActionPerformed
+    }//GEN-LAST:event_SearchTFKeyReleased
 
     /**
      * @param args the command line arguments
@@ -568,7 +555,6 @@ public class ItemDetailsPage extends javax.swing.JFrame {
     private javax.swing.JButton AddButton;
     private javax.swing.JTextField AvailableTF;
     private javax.swing.JTextField BrandTF;
-    private javax.swing.JButton BtnSearch;
     private javax.swing.JButton DeleteButton;
     private javax.swing.JTextField ItemCodeTF;
     private javax.swing.JLabel ItemDetailsTitle;
@@ -585,6 +571,7 @@ public class ItemDetailsPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane2;
