@@ -5,6 +5,8 @@
  */
 package MJGStore;
 
+import java.awt.Image;
+import java.awt.Toolkit;
 import javax.swing.*;
 import java.io.*;
 import java.util.*;
@@ -21,6 +23,9 @@ public class LoginPage extends javax.swing.JFrame {
     public LoginPage() {
         initComponents();
         this.setLocationRelativeTo(null);
+        
+        
+
     }
 
     /**
@@ -156,16 +161,14 @@ public class LoginPage extends javax.swing.JFrame {
                 .addContainerGap(374, Short.MAX_VALUE)
                 .addGroup(panelLoginPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelLoginPageLayout.createSequentialGroup()
-                        .addComponent(txtWelcomeBack, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(337, 337, 337))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelLoginPageLayout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(426, 426, 426))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelLoginPageLayout.createSequentialGroup()
                         .addGroup(panelLoginPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(panelLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2))
-                        .addGap(371, 371, 371))))
+                            .addComponent(jLabel2)
+                            .addComponent(txtWelcomeBack, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(371, 371, 371))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelLoginPageLayout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(422, 422, 422))))
         );
         panelLoginPageLayout.setVerticalGroup(
             panelLoginPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -307,12 +310,15 @@ public class LoginPage extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLoginbtnLoginActionPerformed
 
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
-        StartUpPage startpage = new StartUpPage();
-        startpage.setVisible(true);
-        startpage.pack();
-        startpage.setLocationRelativeTo(null);
-        startpage.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.dispose();
+          RegistrationPage regPage = new RegistrationPage();
+          regPage.setVisible(true);
+          this.dispose();
+//        StartUpPage startpage = new StartUpPage();
+//        startpage.setVisible(true);
+//        startpage.pack();
+//        startpage.setLocationRelativeTo(null);
+//        startpage.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        this.dispose();
     }//GEN-LAST:event_jLabel2MouseClicked
 
     /**

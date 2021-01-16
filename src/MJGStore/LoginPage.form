@@ -47,19 +47,16 @@
                   <EmptySpace pref="374" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="txtWelcomeBack" min="-2" pref="318" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="337" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="jLabel1" min="-2" pref="159" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="426" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Component id="panelLogin" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtWelcomeBack" alignment="1" min="-2" pref="318" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="371" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="jLabel1" min="-2" pref="187" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="422" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
