@@ -22,7 +22,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableRowSorter;
 
 public class ItemDetails extends javax.swing.JFrame {
 
@@ -487,7 +489,14 @@ public class ItemDetails extends javax.swing.JFrame {
     private void tableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tableMouseClicked
         // TODO add your handling code here:
         int selectedRow = table.getSelectedRow();
+        
+        //https://stackoverflow.com/questions/14302489/jtable-correct-row-number-after-filtering
+        if (table.getRowSorter()!=null) {
+            selectedRow = table.getRowSorter().convertRowIndexToModel(selectedRow);
+        }
+        
         DefaultTableModel model = (DefaultTableModel)table.getModel();
+      
         ItemCodeTF.setText(model.getValueAt(selectedRow, 0).toString());
         ItemNameTF.setText(model.getValueAt(selectedRow, 1).toString());
         BrandTF.setText(model.getValueAt(selectedRow, 2).toString());
@@ -511,7 +520,14 @@ public class ItemDetails extends javax.swing.JFrame {
     }//GEN-LAST:event_ReturnButtonActionPerformed
 
     private void BtnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSearchActionPerformed
-        // TODO add your handling code here:
+        
+        DefaultTableModel model = (DefaultTableModel)table.getModel();
+        TableRowSorter<DefaultTableModel> tr;
+        tr = new TableRowSorter<>(model);
+        table.setRowSorter(tr);
+        String search = SearchTF.getText();
+        
+        tr.setRowFilter(RowFilter.regexFilter(search));
     }//GEN-LAST:event_BtnSearchActionPerformed
 
     /**
