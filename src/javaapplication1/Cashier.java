@@ -13,7 +13,8 @@ import java.util.logging.Logger;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
-//
+// Team -> Commit
+// Team -> Remote -> Push
 /**
  *
  * @author nizar
@@ -26,6 +27,27 @@ public class Cashier extends javax.swing.JFrame {
     public Cashier() {
         initComponents();
         this.setLocationRelativeTo(null);
+        
+        try{
+            BufferedReader input = new BufferedReader(new FileReader("itemDetails.txt"));
+            List<String> strings = new ArrayList<>();
+
+            String line = null;
+
+            while ((line = input.readLine()) != null){
+              strings.add(line);
+            }
+
+            input.close();
+
+            String[] lineArray = strings.toArray(new String[]{});
+            
+            //https://www.youtube.com/watch?v=bDTAUkXUrbg
+            jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(lineArray));
+
+            System.out.println(lineArray.toString());
+        }
+        catch (Exception ex) {}
     }
 
     /**
@@ -220,27 +242,7 @@ public class Cashier extends javax.swing.JFrame {
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         
-        try{
-            BufferedReader input = new BufferedReader(new FileReader("itemDetails.txt"));
-            List<String> strings = new ArrayList<>();
-            
-              String line = null;
-              while (( line = input.readLine()) != null){
-                strings.add(line);
-              }
-            
-            
-            input.close();
-            
-
-            String[] lineArray = strings.toArray(new String[]{});
-
-            JComboBox comboBox = new JComboBox(lineArray);
-            }catch (FileNotFoundException ex) {
-            }
-            catch (IOException ex) {
-                
-            }
+        
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void ReturnButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReturnButtonActionPerformed
