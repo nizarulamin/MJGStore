@@ -1,0 +1,3 @@
+ite busuk;1002;0123123;itekun;ite12345;
+rahmat;1003;1213112312;rahmat;rahmat123;
+ramli;1004`;0121312312;ramli;ramli123;

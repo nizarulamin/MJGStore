@@ -1,0 +1,5 @@
+01;Kicap;Cap Ayam;8.00;100;100;
+02;Sos;Kimball;9.00;200;200;
+03;Pendrive;Kingston;20.00;100;100;
+05;Roti Jagung;Gardenia;2.00;98;100;
+06;roti sardin;Gardenia;1.00;100;100;
