@@ -16,7 +16,33 @@ import javax.swing.table.TableRowSorter;
  * @author nizar
  */
 public class UserInformationPage extends javax.swing.JFrame {
-
+    
+    public UserInformationPage() {
+        initComponents();
+        this.setLocationRelativeTo(null);
+        
+        DefaultTableModel model;
+        String staffName, staffID, phoneNum, username, password;
+        try{
+            FileReader reader = new FileReader("user.txt");
+            BufferedReader br = new BufferedReader(reader);
+            model = (DefaultTableModel) tableRegUser.getModel();
+            String input;
+            
+            while((input = br.readLine()) != null){
+                StringTokenizer st = new StringTokenizer(input,";");
+                staffName = st.nextToken();
+                staffID = st.nextToken();
+                phoneNum = st.nextToken();
+                username = st.nextToken();
+                model.insertRow(model.getRowCount(),new Object[]{staffName,staffID,phoneNum,username});
+            }
+            br.close();
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null,e);
+        }
+    }
+    
     /**
      * Creates new form UserInformation
      */    /**
@@ -183,11 +209,13 @@ public class UserInformationPage extends javax.swing.JFrame {
                             .addGap(35, 35, 35)
                             .addComponent(txtStaffName, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(jPanel1Layout.createSequentialGroup()
                                     .addComponent(jLabel3)
-                                    .addGap(4, 4, 4)))
+                                    .addGap(4, 4, 4))
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
                             .addComponent(btnSearch)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(btnUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -214,7 +242,7 @@ public class UserInformationPage extends javax.swing.JFrame {
                                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(15, 15, 15)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(btnSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -363,60 +391,6 @@ public class UserInformationPage extends javax.swing.JFrame {
     }//GEN-LAST:event_tableRegUserMousePressed
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
-
-       /*String tempFile = "temp.txt";
-        String filepath = "user.txt";
-        File oldFile = new File(filepath);
-        File newFile = new File(tempFile);
-
-        String currentLine;
-        String data[];
-        try{
-                FileWriter fw = new FileWriter(tempFile,true);
-                BufferedWriter bw = new BufferedWriter(fw);
-                PrintWriter pw = new PrintWriter(bw);
-
-                FileReader fr = new FileReader(filepath);
-                BufferedReader br = new BufferedReader(fr);
-
-                String staffID = txtStaffID.getText();
-
-
-                while ((currentLine = br.readLine()) != null){
-
-                    data = currentLine.split(";");
-
-                    if (txtStaffID.equals(data[0])){
-                        JOptionPane.showMessageDialog(null, "This data has been deleted");
-                    }
-                    else
-                        pw.println(currentLine);
-                }
-                pw.flush();
-                pw.close();
-                fr.close();
-                br.close();
-                bw.close();
-                fw.close();
-
-                oldFile.delete();
-                File dump = new File(filepath);
-                newFile.renameTo(dump);
-            }
-
-            catch (FileNotFoundException fnf) {
-                System.out.println(fnf.getMessage());
-            }
-
-            catch (EOFException | NumberFormatException eof) {
-                System.out.println(eof.getMessage());
-            }
-
-            catch (IOException io) {
-            System.out.println(io.getMessage());
-            }*/
-        
-        
         DefaultTableModel tblModel=(DefaultTableModel) tableRegUser.getModel();
 
         //delete row
@@ -492,7 +466,6 @@ public class UserInformationPage extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnDeleteActionPerformed
 
-    
     private void btnDeleteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDeleteMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_btnDeleteMouseClicked
