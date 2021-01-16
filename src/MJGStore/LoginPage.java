@@ -313,12 +313,6 @@ public class LoginPage extends javax.swing.JFrame {
           RegistrationPage regPage = new RegistrationPage();
           regPage.setVisible(true);
           this.dispose();
-//        StartUpPage startpage = new StartUpPage();
-//        startpage.setVisible(true);
-//        startpage.pack();
-//        startpage.setLocationRelativeTo(null);
-//        startpage.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//        this.dispose();
     }//GEN-LAST:event_jLabel2MouseClicked
 
     /**
