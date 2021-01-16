@@ -356,7 +356,7 @@ public class ItemDetails extends javax.swing.JFrame {
             }
 
             catch (IOException ex) {
-                Logger.getLogger(Customer.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(CustomerPage.class.getName()).log(Level.SEVERE, null, ex);
             }
 
             ItemCodeTF.setText("");

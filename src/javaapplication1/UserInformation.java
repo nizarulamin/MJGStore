@@ -467,17 +467,16 @@ public class UserInformation extends javax.swing.JFrame {
                   PrintWriter pw = new PrintWriter(new FileWriter(tempFile));
 
                   String line = null;
-
+                  
                   //Read from the original file and write to the new
                   //unless content matches data to be removed.
                   while ((line = br.readLine()) != null) {
                       
-                    CustomerX customer =  readLine(line);
+                    User user = new User(line);
                     
-                    
-                    System.out.println("Staff ID: " + customer.getStaffID());
+                    System.out.println("Staff ID: " + user.getStaffID());
                       
-                    if (!customer.getStaffID().equals(staffID)) {
+                    if (!user.getStaffID().equals(staffID)) {
                       pw.println(line);
                       pw.flush();
                     }
@@ -519,53 +518,6 @@ public class UserInformation extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnDeleteActionPerformed
 
-    public class CustomerX {
-        String name;
-        String staffID;
-        String phoneNum;
-        String user;
-        String pass;
-
-        public CustomerX(String name, String staffID, String phoneNum, String user, String pass) {
-            this.name = name;
-            this.staffID = staffID;
-            this.phoneNum = phoneNum;
-            this.user = user;
-            this.pass = pass;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public String getStaffID() {
-            return staffID;
-        }
-
-        public String getPhoneNum() {
-            return phoneNum;
-        }
-
-        public String getUser() {
-            return user;
-        }
-
-        public String getPass() {
-            return pass;
-        }
-    }
-    
-    private CustomerX readLine(String line) {
-        StringTokenizer st = new StringTokenizer(line,";");
-        String name = st.nextToken();
-        String staffID = st.nextToken();
-        String phoneNum = st.nextToken();
-        String user  = st.nextToken();
-        String pass = st.nextToken();
-        
-        return new CustomerX(name, staffID, phoneNum, user, pass);
-    }
-    
     
     private void btnDeleteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDeleteMouseClicked
         // TODO add your handling code here:
