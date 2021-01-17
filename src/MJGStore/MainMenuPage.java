@@ -56,7 +56,7 @@ public class MainMenuPage extends javax.swing.JFrame {
     }
     
     public void scaleImage1() {
-        ImageIcon icon = new ImageIcon("D:\\User\\Documents\\UiTM Tapah\\CS230\\PART 3\\CSC435 - JAVA\\BlueJ\\PROJECT - GUI\\MJGStore\\src\\Images\\Icon User.png");
+        ImageIcon icon = new ImageIcon("C:\\Users\\Forge-15\\Documents\\NetBeansProjects\\MJGStore\\src\\Images\\Icon User.png");
         Image img = icon.getImage();
         Image imgScale = img.getScaledInstance(user.getWidth(), user.getHeight(), Image.SCALE_SMOOTH);
         ImageIcon scaledIcon = new ImageIcon(imgScale);
@@ -64,7 +64,7 @@ public class MainMenuPage extends javax.swing.JFrame {
     }
     
     public void scaleImage2() {
-        ImageIcon icon = new ImageIcon("D:\\User\\Documents\\UiTM Tapah\\CS230\\PART 3\\CSC435 - JAVA\\BlueJ\\PROJECT - GUI\\MJGStore\\src\\Images\\Icon Item.png");
+        ImageIcon icon = new ImageIcon("C:\\Users\\Forge-15\\Documents\\NetBeansProjects\\MJGStore\\src\\Images\\Icon Item.png");
         Image img = icon.getImage();
         Image imgScale = img.getScaledInstance(item.getWidth(), item.getHeight(), Image.SCALE_SMOOTH);
         ImageIcon scaledIcon = new ImageIcon(imgScale);
@@ -72,7 +72,7 @@ public class MainMenuPage extends javax.swing.JFrame {
     }
     
     public void scaleImage3() {
-        ImageIcon icon = new ImageIcon("D:\\User\\Documents\\UiTM Tapah\\CS230\\PART 3\\CSC435 - JAVA\\BlueJ\\PROJECT - GUI\\MJGStore\\src\\Images\\Icon Customer.png");
+        ImageIcon icon = new ImageIcon("C:\\Users\\Forge-15\\Documents\\NetBeansProjects\\MJGStore\\src\\Images\\Icon Customer.png");
         Image img = icon.getImage();
         Image imgScale = img.getScaledInstance(customer.getWidth(), customer.getHeight(), Image.SCALE_SMOOTH);
         ImageIcon scaledIcon = new ImageIcon(imgScale);
@@ -80,7 +80,7 @@ public class MainMenuPage extends javax.swing.JFrame {
     }
     
     public void scaleImage4() {
-        ImageIcon icon = new ImageIcon("D:\\User\\Documents\\UiTM Tapah\\CS230\\PART 3\\CSC435 - JAVA\\BlueJ\\PROJECT - GUI\\MJGStore\\src\\Images\\Icon Cashier.png");
+        ImageIcon icon = new ImageIcon("C:\\Users\\Forge-15\\Documents\\NetBeansProjects\\MJGStore\\src\\Images\\Icon Cashier.png");
         Image img = icon.getImage();
         Image imgScale = img.getScaledInstance(cashier.getWidth(), cashier.getHeight(), Image.SCALE_SMOOTH);
         ImageIcon scaledIcon = new ImageIcon(imgScale);

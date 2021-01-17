@@ -368,7 +368,7 @@ public class CustomerPageDetails extends javax.swing.JFrame {
             //if single row selected so delete
             tblModel.removeRow(table.getSelectedRow());
             try {
-                String cid = NameTF.getText().toString() + ";" + ICTF.getText().toString() + ";" + PhoneNumTF.getText().toString() + ";" + AddressTA.getText().toString(); // ADDED
+                String cid = NameTF.getText().toString() + ";" + ICTF.getText().toString() + ";" + PhoneNumTF.getText().toString() + ";" + AddressTA.getText().toString()+";"; // ADDED
                 String lineToRemove = cid;
                 String file = "Customer.txt";
                 File inFile = new File("Customer.txt");
