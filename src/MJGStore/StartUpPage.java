@@ -19,17 +19,7 @@ public class StartUpPage extends javax.swing.JFrame {
     public StartUpPage() {
         initComponents();
         this.setLocationRelativeTo(null);
-        scaleImage1();
     }
-    
-    public void scaleImage1() {
-        ImageIcon icon = new ImageIcon("C:\\Users\\Forge-15\\Documents\\NetBeansProjects\\MJGStore\\src\\Images\\MJG.png");
-        Image img = icon.getImage();
-        Image imgScale = img.getScaledInstance(jLabel1.getWidth(), jLabel1.getHeight(), Image.SCALE_SMOOTH);
-        ImageIcon scaledIcon = new ImageIcon(imgScale);
-        jLabel1.setIcon(scaledIcon);
-    }
-   
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -51,10 +41,13 @@ public class StartUpPage extends javax.swing.JFrame {
         setBackground(new java.awt.Color(204, 204, 0));
 
         jPanel1.setBackground(new java.awt.Color(0, 102, 102));
+        jPanel1.setLayout(null);
 
         welcomeLabel.setFont(new java.awt.Font("Quicksand Book", 0, 36)); // NOI18N
         welcomeLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         welcomeLabel.setText("WELCOME TO MJG STORE");
+        jPanel1.add(welcomeLabel);
+        welcomeLabel.setBounds(170, 220, 565, 81);
 
         LogButton.setText("LOGIN");
         LogButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -67,6 +60,8 @@ public class StartUpPage extends javax.swing.JFrame {
                 LogButtonActionPerformed(evt);
             }
         });
+        jPanel1.add(LogButton);
+        LogButton.setBounds(380, 320, 121, 49);
 
         RegButton.setText("REGISTER");
         RegButton.addActionListener(new java.awt.event.ActionListener() {
@@ -74,6 +69,8 @@ public class StartUpPage extends javax.swing.JFrame {
                 RegButtonActionPerformed(evt);
             }
         });
+        jPanel1.add(RegButton);
+        RegButton.setBounds(380, 390, 121, 50);
 
         ExitButton.setText("EXIT");
         ExitButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -86,59 +83,29 @@ public class StartUpPage extends javax.swing.JFrame {
                 ExitButtonActionPerformed(evt);
             }
         });
+        jPanel1.add(ExitButton);
+        ExitButton.setBounds(380, 470, 121, 57);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(170, 170, 170)
-                        .addComponent(welcomeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 565, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(380, 380, 380)
-                        .addComponent(LogButton, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(380, 380, 380)
-                        .addComponent(RegButton, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(380, 380, 380)
-                        .addComponent(ExitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(166, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(213, 213, 213))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(welcomeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(19, 19, 19)
-                .addComponent(LogButton, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(21, 21, 21)
-                .addComponent(RegButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(ExitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(159, Short.MAX_VALUE))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/MJG.png"))); // NOI18N
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(290, 40, 300, 182);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 888, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 675, Short.MAX_VALUE))
         );
 
-        setSize(new java.awt.Dimension(919, 733));
+        setSize(new java.awt.Dimension(918, 735));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
